@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char postanovka[25], ime[15], familiq[15];
+    int godini;
+    printf("Koq postanovka iskate da gledate?\n1. Suglasie\n2. Shvedska zashtita\n3. Nashata frenska svatba\n");
+    scanf("%[^\n]s",&postanovka);
+    printf("Kakvo e Vasheto ime?\n");
+    scanf("%s", &ime);
+    printf("Kakva e vashata familiq?\n");
+    scanf("%s",&familiq);
+    char pulno_ime[30];
+    strcpy(pulno_ime,ime);
+    strcat(pulno_ime, " ");
+    strcat(pulno_ime,familiq);
+    printf("Vashata vuzrast e:\n");
+    scanf("%d",&godini);
+    printf("%s", postanovka);
+    return 0;
+}
