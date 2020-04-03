@@ -5,7 +5,7 @@
 int main()
 {
     char postanovka[25], ime[15], familiq[15];
-    int godini;
+    double godini;
     printf("Koq postanovka iskate da gledate?\n1. Suglasie\n2. Shvedska zashtita\n3. Nashata frenska svatba\n");
     scanf("%[^\n]s",&postanovka);
     printf("Kakvo e Vasheto ime?\n");
@@ -17,7 +17,19 @@ int main()
     strcat(pulno_ime, " ");
     strcat(pulno_ime,familiq);
     printf("Vashata vuzrast e:\n");
-    scanf("%d",&godini);
+    scanf("%lf",&godini);
     printf("%s", postanovka);
+    double standartnacena=10;
+    if(godini<13){
+        standartnacena = standartnacena*9/10;
+        printf("%lf", standartnacena);
+    }
+    else if(godini>=60){
+        standartnacena=standartnacena/2;
+        printf("%lf", standartnacena);
+    }
+    else{
+        printf("%lf", standartnacena);
+    }
     return 0;
 }
